@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inker.API", "Inker.API\Inker.API.csproj", "{0D3CE1E6-E7CB-43CF-A672-B4174AB7F9A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{EBFAD9B3-FDD6-4122-92A8-C30D18EB860C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ECB28E12-FD03-427F-BFA2-A0002143456F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inker.API.Model", "Inker.API.Model\Inker.API.Model.csproj", "{907D542C-DE46-4858-A161-D6F99B9C5CB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inker.API.Controller", "Inker.API.DataBase\Inker.API.Controller.csproj", "{7F95527B-DC40-491A-A048-73B2A7A0628A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inker.Auth.API", "Inker.Auth.API\Inker.Auth.API.csproj", "{86D9E8A7-49C3-4030-B441-AE6CFFD68A0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D3CE1E6-E7CB-43CF-A672-B4174AB7F9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3CE1E6-E7CB-43CF-A672-B4174AB7F9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3CE1E6-E7CB-43CF-A672-B4174AB7F9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3CE1E6-E7CB-43CF-A672-B4174AB7F9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{907D542C-DE46-4858-A161-D6F99B9C5CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{907D542C-DE46-4858-A161-D6F99B9C5CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{907D542C-DE46-4858-A161-D6F99B9C5CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{907D542C-DE46-4858-A161-D6F99B9C5CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F95527B-DC40-491A-A048-73B2A7A0628A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F95527B-DC40-491A-A048-73B2A7A0628A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F95527B-DC40-491A-A048-73B2A7A0628A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F95527B-DC40-491A-A048-73B2A7A0628A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D9E8A7-49C3-4030-B441-AE6CFFD68A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D9E8A7-49C3-4030-B441-AE6CFFD68A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D9E8A7-49C3-4030-B441-AE6CFFD68A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D9E8A7-49C3-4030-B441-AE6CFFD68A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D3CE1E6-E7CB-43CF-A672-B4174AB7F9A7} = {ECB28E12-FD03-427F-BFA2-A0002143456F}
+		{907D542C-DE46-4858-A161-D6F99B9C5CB4} = {EBFAD9B3-FDD6-4122-92A8-C30D18EB860C}
+		{7F95527B-DC40-491A-A048-73B2A7A0628A} = {EBFAD9B3-FDD6-4122-92A8-C30D18EB860C}
+		{86D9E8A7-49C3-4030-B441-AE6CFFD68A0A} = {ECB28E12-FD03-427F-BFA2-A0002143456F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3FAA9F5-B333-408C-8E2E-9263AA86242A}
+	EndGlobalSection
+EndGlobal
