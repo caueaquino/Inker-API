@@ -4,7 +4,7 @@ namespace Inker.API.Model
 {
     public class User
     {
-        public string Email { get; }
+        public string Email { get; set; }
         public string Password { get; set; }
         public int IdStudyArea { get; set; }
         public string Name { get; set; }
