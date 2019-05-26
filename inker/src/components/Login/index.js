@@ -1,29 +1,51 @@
 import React, { Component } from 'react'
 
-import TextField from '@material-ui/core/TextField';
-
 import './styles.css';
 
-export default class index extends Component {
-    batata = {
-        a : 'aasd'
-    }
+import TextField from '@material-ui/core/TextField';
+import { Fab } from '@material-ui/core';
 
+export default class index extends Component {
     render() {
         return (
             <section id="login-container">
-                <h1>Login</h1>
+                <h1>LOGIN</h1>
                 <TextField
-                    id="input-email"
-                    label="Email"
-                    style={{ margin: 8 }}
-                    placeholder="Insira seu E-mail"
-                    fullWidth
+                    required
+                    id="standard-required"
+                    label="E-mail"
+                    style={{marginTop: 30}}
                     margin="normal"
-                    InputLabelProps={{
-                    shrink: true,
-                    }}
+                    fullWidth
                 />
+                <TextField
+                    required
+                    id="standard-password-input"
+                    label="Senha"
+                    type="password"
+                    autoComplete="current-password"
+                    margin="normal"
+                    fullWidth
+                />
+                <Fab
+                    variant="extended"
+                    size="large"
+                    style={{marginTop: 30}}
+                    color="white"
+                    id="bt-login"
+                >
+                    Entrar
+                </Fab>
+                <Fab
+                    variant="extended"
+                    size="large"
+                    style={{marginTop: 10}}
+                    color="white"
+                    id="bt-register"
+                >
+                    Cadastrar-se
+                </Fab>
+                <a></a>
             </section>
         )
     }
