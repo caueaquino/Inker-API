@@ -7,6 +7,8 @@ import logo from '../../assets/images/Logo.png';
 import TextField from '@material-ui/core/TextField';
 import { Fab } from '@material-ui/core';
 
+import RegisterModal from '../Register/index'
+
 export default class index extends Component {
     render() {
         return (
@@ -27,7 +29,7 @@ export default class index extends Component {
                     required
                     id="email-input"
                     label="E-mail"
-                    style={{marginTop: 40, width: 250}}
+                    style={{marginTop: 40}}
                     margin="normal"
                     fullWidth
                 />
@@ -52,15 +54,9 @@ export default class index extends Component {
                     Entrar
                 </Fab>
                 
-                <Fab
-                    variant="extended"
-                    size="large"
-                    style={{marginTop: 20}}
-                    id="bt-register"
-                >
-                    Cadastrar-se
-                </Fab>
-                
+                <RegisterModal>
+                </RegisterModal>
+
                 <button 
                     id="bt-recover"
                 >
