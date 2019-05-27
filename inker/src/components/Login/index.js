@@ -15,7 +15,8 @@ export default class index extends Component {
             <section id="login-container">
                 
                 <img 
-                    width="100"
+                    width="230"
+                    height="115"
                     src={logo} 
                     alt="logo inker"
                 >

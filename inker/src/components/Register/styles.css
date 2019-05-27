@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: rgb(255, 255, 129)
+    background-image: linear-gradient(rgb(255, 204, 19), rgb(255, 231, 20),rgb(255, 255, 21));
 }
 
 #header-register {

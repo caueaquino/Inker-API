@@ -18,15 +18,18 @@ function getModalStyle() {
 
 const useStyles = makeStyles(theme => ({
   paper: {
+    marginTop: 30,
+    marginBottom: 30,
     display: 'flex',
     justifyContent: 'center',
-    position: 'absolute',
+    position: 'relative',
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: 40,
+    width: '90%',
+    maxWidth: 500,
     outline: 'none',
     borderRadius : 40,
-    boxAlign: "center",
   },
 }));
 
