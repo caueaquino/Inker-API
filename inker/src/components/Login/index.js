@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import './styles.css';
 
-import logo from '../../assets/images/Logo.png';
+import logo from '../../assets/images/FullLogo.png';
 
 import TextField from '@material-ui/core/TextField';
 import { Fab } from '@material-ui/core';
@@ -16,7 +16,7 @@ export default class index extends Component {
                 
                 <img 
                     width="100"
-                    src={{logo}} 
+                    src={logo} 
                     alt="logo inker"
                 >
                 </img>
