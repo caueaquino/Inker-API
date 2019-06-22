@@ -3,7 +3,7 @@ import React from 'react'
 const Main = () => {
     return (
         <div>
-            <h1>inker principal</h1>
+            <h1>Inker principal</h1>
         </div>
     )
 }

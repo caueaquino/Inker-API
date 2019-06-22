@@ -1,37 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
+import {Link} from 'react-router-dom'
+
 import { Fab, TextField, Button } from '@material-ui/core';
 
 import './styles.css';
 
-function getModalStyle() {
-  const top = 50;
-  const left = 50;
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
-
-const useStyles = makeStyles(theme => ({
-  paper: {
-    marginTop: 30,
-    marginBottom: 30,
-    display: 'flex',
-    justifyContent: 'center',
-    position: 'relative',
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    padding: 40,
-    width: '90%',
-    maxWidth: 500,
-    outline: 'none',
-    borderRadius : 40,
-  },
-}));
 
 const studyAreas = [
     {
@@ -61,165 +34,128 @@ const studyAreas = [
 ];
 
 const RegisterModal = () => {
-    const [open, setOpen] = React.useState(false);
-    const [modalStyle] = React.useState(getModalStyle);
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-    const classes = useStyles();
-
     return (
         <>
-      
-            <Fab 
-                variant="extended"
-                size="large"
-                style={{marginTop: 20}}
-                id="bt-register"
-                onClick={handleOpen}
+            <div
+                id="register-modal"
             >
-                Cadastrar-se
-            </Fab>
-        
-            <Modal
-                aria-labelledby="simple-modal-title"
-                aria-describedby="simple-modal-description"
-                open={open}
-                onClose={handleClose}
-            >
-        
-                <div 
-                    style={modalStyle} 
-                    className={classes.paper}
-                    id="register-modal"
-                >
-                    <header id="header-register">
+                <header id="header-register">
 
-                        <h1>
-                            Cadastro
+                    <h1>
+                        Cadastro
                         </h1>
-                    
-                    </header>
 
-                    <section id="section-register">
+                </header>
 
-                        <TextField
-                            required
-                            id="email-input"
-                            label="E-mail"
-                            style={{marginTop: 40}}
-                            margin="normal"
-                            fullWidth
-                        />
+                <section id="section-register">
 
-                        <TextField
-                            required
-                            id="password-input"
-                            label="Senha"
-                            style={{marginTop: 30}}
-                            margin="normal"
-                            fullWidth
-                            password
-                        />
+                    <TextField
+                        required
+                        id="email-input"
+                        label="E-mail"
+                        style={{ marginTop: 40 }}
+                        margin="normal"
+                        fullWidth
+                    />
 
-                        <TextField
-                            id="standard-select-currency-native"
-                            select
-                            styles={{marginTop: 30}}
-                            label="Curso"
-                            className={classes.textField}
-                            SelectProps={{
+                    <TextField
+                        required
+                        id="password-input"
+                        label="Senha"
+                        style={{marginTop: 30}}
+                        type="password"
+                        autoComplete="current-password"
+                        margin="normal"
+                        fullWidth
+                    />
+
+                    <TextField
+                        id="standard-select-currency-native"
+                        select
+                        styles={{ marginTop: 30 }}
+                        label="Curso"
+                        SelectProps={{
                             native: true,
-                            MenuProps: {
-                                className: classes.menu,
-                            },
-                            }}
-                            margin="normal"
-                        >
-                            {studyAreas.map(option => (
+                        }}
+                        margin="normal"
+                    >
+                        {studyAreas.map(option => (
                             <option key={option.value} value={option.value}>
                                 {option.label}
                             </option>
-                            ))}
-                        </TextField>
+                        ))}
+                    </TextField>
 
-                        <TextField
-                            required
-                            id="name-input"
-                            label="Nome"
-                            style={{marginTop: 30}}
-                            margin="normal"
-                            fullWidth
-                        />
+                    <TextField
+                        required
+                        id="name-input"
+                        label="Nome"
+                        style={{ marginTop: 30 }}
+                        margin="normal"
+                        fullWidth
+                    />
 
-                        <TextField
-                            id="lastname-input"
-                            label="Sobrenome"
-                            style={{marginTop: 30}}
-                            margin="normal"
-                            fullWidth
-                        /> 
+                    <TextField
+                        id="lastname-input"
+                        label="Sobrenome"
+                        style={{ marginTop: 30 }}
+                        margin="normal"
+                        fullWidth
+                    />
 
-                        <TextField
-                            id="avatar-input"
-                            label="URL Avatar"
-                            style={{marginTop: 30}}
-                            margin="normal"
-                            fullWidth
-                        /> 
+                    <TextField
+                        id="avatar-input"
+                        label="URL Avatar"
+                        style={{ marginTop: 30 }}
+                        margin="normal"
+                        fullWidth
+                    />
 
-                        <TextField
-                            id="age-input"
-                            label="Idade"
-                            style={{marginTop: 30}}
-                            margin="normal"
-                            type="number"
-                            fullWidth
-                        /> 
+                    <TextField
+                        id="age-input"
+                        label="Idade"
+                        style={{ marginTop: 30 }}
+                        margin="normal"
+                        type="number"
+                        fullWidth
+                    />
 
-                        <TextField
-                            id="email-input"
-                            label="Telefone"
-                            style={{marginTop: 30}}
-                            margin="normal"
-                            type="phone"
-                            fullWidth
-                        /> 
-                    </section>
-                    
-                    <footer id="footer-register">
-                        
+                    <TextField
+                        id="email-input"
+                        label="Telefone"
+                        style={{ marginTop: 30 }}
+                        margin="normal"
+                        type="phone"
+                        fullWidth
+                    />
+                </section>
+
+                <footer id="footer-register">
+                    <Link 
+                        to="/login"
+                        style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+                    >
                         <Button
                             variant="extended"
                             size="medium"
                             id="bt-cancel"
-                            onClick={handleClose}
                         >
                             Cancelar
                         </Button>
-                    
-                        <Fab 
-                            variant="extended"
-                            size="large"
-                            style={{marginLeft: 10}}
-                            id="bt-confirm"
-                            onClick={handleClose}
-                        >
-                            Confirmar
-                        </Fab>
+                    </Link>
 
-                    </footer>
-                
-                </div>
-        
-            </Modal>
-        
+                    <Fab
+                        variant="extended"
+                        size="large"
+                        style={{ marginLeft: 10 }}
+                        id="bt-confirm"
+                    >
+                        Confirmar
+                    </Fab>
+
+                </footer>
+
+            </div>
         </>
     );
 }

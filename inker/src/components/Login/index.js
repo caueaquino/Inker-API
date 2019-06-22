@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 import './styles.css';
 
@@ -7,7 +8,6 @@ import logo from '../../assets/images/FullLogo.png';
 import TextField from '@material-ui/core/TextField';
 import { Fab } from '@material-ui/core';
 
-import RegisterModal from '../Register/index'
 
 export default class index extends Component {
     render() {
@@ -25,38 +25,50 @@ export default class index extends Component {
                 <h1>
                     LOGIN
                 </h1>
+                <form>
+                    <TextField
+                        required
+                        id="email-input"
+                        label="E-mail"
+                        style={{marginTop: 40}}
+                        margin="normal"
+                        fullWidth
+                    />
                 
-                <TextField
-                    required
-                    id="email-input"
-                    label="E-mail"
-                    style={{marginTop: 40}}
-                    margin="normal"
-                    fullWidth
-                />
-                
-                <TextField
-                    required
-                    id="password-input"
-                    label="Senha"
-                    style={{marginTop: 30}}
-                    type="password"
-                    autoComplete="current-password"
-                    margin="normal"
-                    fullWidth
-                />
-                
-                <Fab
-                    variant="extended"
-                    size="large"
-                    style={{marginTop: 40}}
-                    id="bt-login"
+                    <TextField
+                        required
+                        id="password-input"
+                        label="Senha"
+                        style={{marginTop: 30}}
+                        type="password"
+                        autoComplete="current-password"
+                        margin="normal"
+                        fullWidth
+                    />
+                    
+                    <Fab
+                        variant="extended"
+                        size="large"
+                        style={{marginTop: 40}}
+                        id="bt-login"
+                    >
+                        Entrar
+                    </Fab>
+                </form>    
+
+                <Link 
+                    to="/register"
+                    style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                 >
-                    Entrar
-                </Fab>
-                
-                <RegisterModal>
-                </RegisterModal>
+                    <Fab 
+                        variant="extended"
+                        size="large"
+                        style={{marginTop: 20}}
+                        id="bt-register"
+                    >
+                        Cadastrar-se
+                    </Fab> 
+                </Link>
 
                 <button 
                     id="bt-recover"

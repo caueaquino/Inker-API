@@ -3,6 +3,10 @@
     flex-direction: column;
     margin: 0;
     background-image: linear-gradient(rgb(255, 204, 19), rgb(255, 231, 20),rgb(255, 255, 21));
+    padding: 50px;
+    border-radius: 40px;
+    margin: 30px;
+    width: 400px;
 }
 
 #header-register {
