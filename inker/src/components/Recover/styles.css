@@ -28,7 +28,7 @@
 }
 
 #bt-confirm-recover:hover, #bt-cancel-recover:hover{
-    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #bt-cancel-recover:hover{

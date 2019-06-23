@@ -26,7 +26,7 @@ h1 {
 }
 
 #bt-login:hover, #bt-register:hover, #bt-recover:hover {
-    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #bt-recover {
