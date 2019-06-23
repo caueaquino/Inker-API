@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Redirect, Route} from 'react-router-dom'
 
 import Home from '../pages/Home'
 
@@ -10,7 +10,10 @@ export default class Router extends Component {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route path="/" component={Home} />
+                    <Route exact path="/" render={() =>
+                        <Redirect to="/home"/>
+                    }/>
+                    <Route path="/home" component={Home} />
                     <Route path="/inker" component={Main} />
                 </Switch>
             </BrowserRouter>

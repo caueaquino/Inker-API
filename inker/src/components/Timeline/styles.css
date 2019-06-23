@@ -1,0 +1,55 @@
+#timeline {
+    display: flex;
+    align-items: center;
+    background-image: url('../../assets/images/home-background.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 64px);
+    flex-direction: column;
+}
+
+.card-top {
+    margin-top: 50px;
+    height: 130px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+#add-bt {
+    transition: all 0.2s;
+}
+
+#add-bt:hover {
+    transform: scale(1.1);
+}
+
+.card-post {
+    width: 80%;
+    margin-top: 5px;
+    min-height: 100px;
+}
+
+.card-post section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#up-bt {
+    background-color: rgba(0, 119, 255, 0.5);
+    transition: all 0.2s;
+}
+ 
+#up-bt:hover {
+    background-color: rgb(0, 120, 255);
+    transform: scale(1.1);
+}

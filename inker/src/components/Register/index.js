@@ -132,7 +132,7 @@ const RegisterModal = () => {
 
                 <footer id="footer-register">
                     <Link 
-                        to="/login"
+                        to="/home/login"
                         style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                     >
                         <Button

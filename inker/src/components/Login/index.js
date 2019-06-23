@@ -45,19 +45,23 @@ export default class index extends Component {
                         margin="normal"
                         fullWidth
                     />
-                    
-                    <Fab
-                        variant="extended"
-                        size="large"
-                        style={{marginTop: 40}}
-                        id="bt-login"
+                    <Link 
+                        to="/inker"
+                        style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                     >
-                        Entrar
-                    </Fab>
+                        <Fab
+                            variant="extended"
+                            size="large"
+                            style={{marginTop: 40}}
+                            id="bt-login"
+                        >
+                            Entrar
+                        </Fab>
+                    </Link>
                 </form>    
 
                 <Link 
-                    to="/register"
+                    to="/home/register"
                     style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                 >
                     <Fab 
@@ -69,13 +73,17 @@ export default class index extends Component {
                         Cadastrar-se
                     </Fab> 
                 </Link>
-
-                <button 
-                    id="bt-recover"
+                
+                <Link 
+                    to="/home/recover"
+                    style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                 >
-                    Esqueceu a senha?
-                </button>
-            
+                    <button 
+                        id="bt-recover"
+                    >
+                        Esqueceu a senha?
+                    </button>
+                </Link>
             </section>
         )
     }
