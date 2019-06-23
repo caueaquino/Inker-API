@@ -29,8 +29,10 @@ export default class Timeline extends Component {
                         <h2>Nenhum post foi encontrado!</h2>
                     </section>
 
-                    <MainFooter></MainFooter>
+                    <footer></footer>
                 </Card>
+
+                <MainFooter></MainFooter>
 
                 <Fab id="up-bt" color="primary" aria-label="ArrowTop" style={{position: 'fixed', right: '5%', bottom:'100px'}}>
                     <ArrowDropUpIcon />
