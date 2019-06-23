@@ -1,3 +1,30 @@
-#main-sidebar {
-    
+.itens-side {
+    padding: 20px 0px;
+    width: 100%;
+    border-top: 1px solid rgb(247, 247, 247);
+    border-bottom: 1px solid rgb(247, 247, 247);
+    border-left: none;
+    border-right: none;
+    font-weight: 100;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 0, 76);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.itens-side:hover {
+    background-color: rgba(158, 158, 158, 0.2);
+}
+
+#bt-close-side {
+    border-top: 2px solid rgb(247, 247, 247);
+    border-bottom: 2px solid rgb(247, 247, 247);
+    margin-top: 100%;
+    font-size: 12pt;
+    color: black;
+    font-weight: 900!important;
+    min-height: 100%;
 }

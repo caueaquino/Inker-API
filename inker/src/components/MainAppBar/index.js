@@ -7,7 +7,6 @@ import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
@@ -16,6 +15,8 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import {Link} from 'react-router-dom'
 
 import './styles.css'
+
+import Sidebar from '../../components/Sidebar'
 
 import WhiteLogo from '../../assets/images/FullLogoWhite.png'
 import { flexbox } from '@material-ui/system';
@@ -179,14 +180,7 @@ const MainAppBar = () => {
     <div className={classes.grow}>
       <AppBar position="static" style={{ backgroundColor: 'rgb(230,0,70)' }}>
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
+          <Sidebar></Sidebar>
 
           <img id="logo-bar" src={WhiteLogo} height="40px" width="100px" alt="logo-inker" />
 

@@ -5,7 +5,8 @@ import './styles.css'
 import Card from '@material-ui/core/Card';
 import Fab from '@material-ui/core/Fab';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
-import SimpleModal from '../CreatePost';
+
+import CreatePost from '../CreatePost';
 
 export default class Timeline extends Component {
     
@@ -13,9 +14,9 @@ export default class Timeline extends Component {
         return (
             <section id="timeline">
                 <Card className="card-top">
-                    <h1>Mural Geral</h1>
+                    <h1>Feed Principal</h1>
                     
-                    <SimpleModal></SimpleModal>
+                    <CreatePost></CreatePost>
                 </Card>
 
                 <Card className="card-post">
