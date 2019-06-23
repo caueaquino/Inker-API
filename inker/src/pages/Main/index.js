@@ -17,6 +17,12 @@ const Main = () => {
             }/>
 
             <Route path="/inker/timeline" component={Timeline} />
+            <Route path="/inker/software" component={Timeline} />
+            <Route path="/inker/analise" component={Timeline} />
+            <Route path="/inker/eletrica" component={Timeline} />
+            <Route path="/inker/mecanica" component={Timeline} />
+            <Route path="/inker/automacao" component={Timeline} />
+            <Route path="/inker/matematica" component={Timeline} />
             <Route path="/inker/perfil" component={Perfil} />
         </section>
     )

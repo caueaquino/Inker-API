@@ -7,6 +7,7 @@ import Fab from '@material-ui/core/Fab';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
 import CreatePost from '../CreatePost';
+import MainFooter from '../MainFooter';
 
 export default class Timeline extends Component {
     
@@ -28,9 +29,7 @@ export default class Timeline extends Component {
                         <h2>Nenhum post foi encontrado!</h2>
                     </section>
 
-                    <footer>
-
-                    </footer>
+                    <MainFooter></MainFooter>
                 </Card>
 
                 <Fab id="up-bt" color="primary" aria-label="ArrowTop" style={{position: 'fixed', right: '5%', bottom:'100px'}}>

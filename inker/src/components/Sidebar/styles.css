@@ -24,7 +24,6 @@
     border-bottom: 2px solid rgb(247, 247, 247);
     margin-top: 100%;
     font-size: 12pt;
-    color: black;
-    font-weight: 900!important;
+    color: rgb(83, 83, 83);
     min-height: 100%;
 }
