@@ -16,6 +16,9 @@ import {Link} from 'react-router-dom'
 
 import './styles.css'
 
+import Messages from '../Messages'
+import Notifications from '../Notificatio'
+
 import Sidebar from '../../components/Sidebar'
 
 import WhiteLogo from '../../assets/images/FullLogoWhite.png'
@@ -153,22 +156,11 @@ const MainAppBar = () => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton color="inherit">
-          <Badge badgeContent={0} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Mensagens</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton color="inherit">
-          <Badge badgeContent={0} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notificações</p>
-      </MenuItem>
+      
+      <Messages></Messages>
+
+      <Notifications></Notifications>
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="Account of current user"
@@ -178,7 +170,6 @@ const MainAppBar = () => {
         >
           <AccountCircle />
         </IconButton>
-        <p>Perfil</p>
       </MenuItem>
     </Menu>
   );
@@ -208,16 +199,10 @@ const MainAppBar = () => {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton color="inherit">
-              <Badge badgeContent={0} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton color="inherit">
-              <Badge badgeContent={0} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+            <Messages></Messages>
+
+            <Notifications></Notifications>
+            
             <IconButton
               edge="end"
               aria-label="Account of current user"

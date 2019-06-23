@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Badge from '@material-ui/core/Badge'
-import MailIcon from '@material-ui/icons/Mail';
+import NotificationsIcon from '@material-ui/icons/Notifications';
 import IconButton from '@material-ui/core/IconButton';
 
 function getModalStyle() {
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Messages() {
+export default function Notifications() {
     const [open, setOpen] = React.useState(false);
     
     const [modalStyle] = React.useState(getModalStyle);
@@ -45,7 +45,7 @@ export default function Messages() {
         <div>
             <IconButton color="inherit" onClick={handleOpen}>
               <Badge badgeContent={0} color="secondary">
-                <MailIcon />
+                <NotificationsIcon />
               </Badge>
             </IconButton>
             <Modal
@@ -55,7 +55,7 @@ export default function Messages() {
                 onClose={handleClose}
             >
                 <div style={modalStyle} className={classes.paper}>
-                    fazer modal mensagem
+                    fazer modal notificações
                 </div>
             </Modal>
         </div>
