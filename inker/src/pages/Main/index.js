@@ -6,7 +6,7 @@ import './styles.css'
 import MainAppBar from '../../components/MainAppBar'
 import Timeline from '../../components/Timeline'
 import Perfil from '../../components/Perfil'
-
+import EditPerfil from '../../components/EditPerfil'
 const Main = () => {
     return (
         <section id="main">
@@ -17,13 +17,14 @@ const Main = () => {
             }/>
 
             <Route path="/inker/timeline" component={Timeline} />
-            <Route path="/inker/software" component={Timeline} />
-            <Route path="/inker/analise" component={Timeline} />
-            <Route path="/inker/eletrica" component={Timeline} />
-            <Route path="/inker/mecanica" component={Timeline} />
-            <Route path="/inker/automacao" component={Timeline} />
-            <Route path="/inker/matematica" component={Timeline} />
+            <Route path="/inker/timeline-software" component={Timeline} />
+            <Route path="/inker/timeline-analise" component={Timeline} />
+            <Route path="/inker/timeline-eletrica" component={Timeline} />
+            <Route path="/inker/timeline-mecanica" component={Timeline} />
+            <Route path="/inker/timeline-automacao" component={Timeline} />
+            <Route path="/inker/timeline-matematica" component={Timeline} />
             <Route path="/inker/perfil" component={Perfil} />
+            <Route path="/inker/edit-perfil" component={EditPerfil} />
         </section>
     )
 }

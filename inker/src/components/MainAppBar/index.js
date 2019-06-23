@@ -127,6 +127,13 @@ const MainAppBar = () => {
       </Link>
       
       <Link
+        to="/inker/edit-perfil"
+        style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgb(255,0,76)' }}
+      >
+        <MenuItem onClick={handleMenuClose}>Editar</MenuItem>
+      </Link>
+
+      <Link
         to="/home/login"
         style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgb(255,0,76)' }}
       >
