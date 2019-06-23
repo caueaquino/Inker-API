@@ -5,6 +5,7 @@ import './styles.css'
 
 import MainAppBar from '../../components/MainAppBar'
 import Timeline from '../../components/Timeline'
+import Perfil from '../../components/Perfil'
 
 const Main = () => {
     return (
@@ -16,7 +17,7 @@ const Main = () => {
             }/>
 
             <Route path="/inker/timeline" component={Timeline} />
-        
+            <Route path="/inker/perfil" component={Perfil} />
         </section>
     )
 }

@@ -4,8 +4,8 @@ import './styles.css'
 
 import Card from '@material-ui/core/Card';
 import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import SimpleModal from '../CreatePost';
 
 export default class Timeline extends Component {
     
@@ -15,9 +15,7 @@ export default class Timeline extends Component {
                 <Card className="card-top">
                     <h1>Mural Geral</h1>
                     
-                    <Fab id="add-bt" color="secondary" aria-label="Add" style={{position: 'absolute', left: '18%', top:'217px'}}>
-                        <AddIcon />
-                    </Fab>
+                    <SimpleModal></SimpleModal>
                 </Card>
 
                 <Card className="card-post">

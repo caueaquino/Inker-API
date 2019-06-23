@@ -13,6 +13,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import {Link} from 'react-router-dom'
 
 import './styles.css'
 
@@ -117,8 +118,19 @@ const MainAppBar = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Sair</MenuItem>
+      <Link
+        to="/inker/perfil"
+        style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgb(255,0,76)' }}
+      >
+        <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
+      </Link>
+      
+      <Link
+        to="/home/login"
+        style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgb(255,0,76)' }}
+      >
+        <MenuItem onClick={handleMenuClose}>Sair</MenuItem>
+      </Link>
     </Menu>
   );
 
@@ -165,7 +177,7 @@ const MainAppBar = () => {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" style={{backgroundColor: 'rgb(230,0,70)'}}>
+      <AppBar position="static" style={{ backgroundColor: 'rgb(230,0,70)' }}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -175,10 +187,10 @@ const MainAppBar = () => {
           >
             <MenuIcon />
           </IconButton>
-          
+
           <img id="logo-bar" src={WhiteLogo} height="40px" width="100px" alt="logo-inker" />
-          
-          <div style={{display:flexbox, justifyContent:'center', alignItems:'center', width:'100%'}}>
+
+          <div style={{ display: flexbox, justifyContent: 'center', alignItems: 'center', width: '100%' }}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
