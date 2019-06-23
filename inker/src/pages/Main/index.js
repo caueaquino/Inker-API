@@ -10,7 +10,7 @@ const Main = () => {
     return (
         <section id="main">
             <MainAppBar></MainAppBar>
-
+            
             <Route exact path="/inker" render={() =>
                 <Redirect to="/inker/timeline"/>
             }/>
