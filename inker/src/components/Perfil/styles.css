@@ -1,3 +1,82 @@
-#perfil {
+#main-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets/images/home-background.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 64px);
+
+}
+
+#main-perfil img{
+    border-radius: 100%;
+    width: 100%;
+}
+
+#main-perfil .card-post{
+    height: calc(80vh - 250px);
+}
+
+#perfil-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#perfil-block div{
+    width: 50%;
+    margin-left: 5%;
+}
+
+#perfil-block div:first-child{
+    width: 30%;
+    margin: 0 5% 0 10%; 
+    text-align: center;
+}
+
+#perfil-block p{
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
+#perfil-block p:first-child{
+    margin-top: 0;
+}
+
+#perfil-block h2{
+    font-size: 2rem;
+}
+
+#perfil-block h3{
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1200px){
+    #perfil-block h2{
+        font-size: 1.5rem;
+    }
     
+    #perfil-block h3{
+        font-size: 1.3rem;
+    }
+    #perfil-block p{
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    #perfil-block h2{
+        font-size: 1.2rem;
+    }
+    
+    #perfil-block h3{
+        font-size: 1rem;
+    }
+    #perfil-block p{
+        font-size: 1rem;
+    }
 }
