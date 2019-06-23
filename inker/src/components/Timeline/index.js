@@ -15,7 +15,7 @@ export default class Timeline extends Component {
                 <Card className="card-top">
                     <h1>Mural Geral</h1>
                     
-                    <Fab id="add-bt" color="primary" aria-label="Add" style={{backgroundColor: 'rgb(0, 120, 255)', position: 'fixed', left: '18%', top:'217px'}}>
+                    <Fab id="add-bt" color="secondary" aria-label="Add" style={{position: 'absolute', left: '18%', top:'217px'}}>
                         <AddIcon />
                     </Fab>
                 </Card>

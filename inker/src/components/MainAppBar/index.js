@@ -3,7 +3,6 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -14,6 +13,11 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+
+import './styles.css'
+
+import WhiteLogo from '../../assets/images/FullLogoWhite.png'
+import { flexbox } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -130,16 +134,16 @@ const MainAppBar = () => {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="Show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+        <IconButton color="inherit">
+          <Badge badgeContent={0} color="secondary">
             <MailIcon />
           </Badge>
         </IconButton>
         <p>Mensagens</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="Show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
+        <IconButton color="inherit">
+          <Badge badgeContent={0} color="secondary">
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -161,7 +165,7 @@ const MainAppBar = () => {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" style={{backgroundColor: 'rgb(0, 0, 0)'}}>
+      <AppBar position="static" style={{backgroundColor: 'rgb(230,0,70)'}}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -171,21 +175,23 @@ const MainAppBar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Inker
-            </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+          
+          <img id="logo-bar" src={WhiteLogo} height="40px" width="100px" alt="logo-inker" />
+          
+          <div style={{display:flexbox, justifyContent:'center', alignItems:'center', width:'100%'}}>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Pesquisar…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ 'aria-label': 'Search' }}
+              />
             </div>
-            <InputBase
-              placeholder="Pesquisar…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'Search' }}
-            />
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
