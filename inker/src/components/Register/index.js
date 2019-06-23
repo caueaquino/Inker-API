@@ -29,7 +29,7 @@ const studyAreas = [
     },
     {
         value: '5',
-        label: 'matemática',
+        label: 'Matemática',
     }
 ];
 
