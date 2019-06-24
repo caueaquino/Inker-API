@@ -9,6 +9,12 @@ export default class Recover extends Component {
     state ={
         email: ""
     }
+
+    changeHandler = e =>{
+        this.setState({email: e.taget.value});
+        console.log(this.state.email)
+    }
+
     render(){
         return (
             <section id="recover">
@@ -21,14 +27,16 @@ export default class Recover extends Component {
                 </img>
                 
                 <h1>Recuperar Senha</h1>
-                <form action="https://formspree.io/email@domain.tld" method="POST">
+                <form action={`https://formspree.io/${this.state.email}`} method="POST">
                     <TextField
                         required
                         id="email-input"
+                        onChange={this.changeHandler}
                         label="E-mail"
                         style={{marginTop: 40}}
                         margin="normal"
                         fullWidth
+                        
                     />
                     <footer id="footer-recover">
                         <Link 
@@ -36,7 +44,7 @@ export default class Recover extends Component {
                             style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                         >
                             <Button
-                                variant="extended"
+                                
                                 size="medium"
                                 id="bt-cancel-recover"
                             >
@@ -49,6 +57,7 @@ export default class Recover extends Component {
                             size="large"
                             style={{ marginLeft: 10 }}
                             id="bt-confirm-recover"
+                            value="send"
                         >
                             Confirmar
                         </Fab>

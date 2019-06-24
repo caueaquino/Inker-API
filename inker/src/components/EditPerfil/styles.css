@@ -1,0 +1,36 @@
+#edit-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets/images/home-background.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 64px);
+}
+
+#edit-block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.teste{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.teste:first-child{
+    padding-right: 3%;
+}
+
+#edit-fot{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: flex-end;
+}
