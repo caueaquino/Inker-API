@@ -18,13 +18,13 @@
     justify-content: center;
 }
 
-.teste{
+.edit-perfil-div{
     width: 40%;
     display: flex;
     flex-direction: column;
 }
 
-.teste:first-child{
+.edit-perfil-div:first-child{
     padding-right: 3%;
 }
 

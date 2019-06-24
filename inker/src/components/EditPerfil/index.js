@@ -42,7 +42,7 @@ export default class EditPerfil extends Component {
                     <h1>Editar Perfil</h1>
                 </Card>
                 <Card className="card-post" id="edit-block" >
-                    <div className="teste">
+                    <div className="edit-perfil-div">
                         <TextField
                             required
                             id="name-input"
@@ -78,7 +78,7 @@ export default class EditPerfil extends Component {
                         />
 
                     </div>
-                    <div className="teste">
+                    <div className="edit-perfil-div">
                         <TextField
                             id="standard-select-currency-native"
                             select
