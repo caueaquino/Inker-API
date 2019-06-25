@@ -19,8 +19,8 @@ export default class Perfil extends Component {
                     </div>
                     <div>
                         <form>
-                            <p>Email: xesquedele.hotmail.com</p>
-                            <p>Idade: 30</p>
+                            <p>Email: leonardocruz@alunos.utfpr.edu.br</p>
+                            <p>Idade: 21</p>
                             <p>Curso: Software</p>
                             <p>Telefone: 9662-4563</p>
                         </form>
