@@ -1,0 +1,36 @@
+#header-not{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 25px;
+    border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+#header-not h1 {
+    width: 100%;
+}
+
+#body-not {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-bottom: 2px solid rgb(228, 228, 228);
+    height: 70vh;
+}
+
+#body-not h2 {
+    font-size: 18px;
+}
+
+#foot-not {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    padding-right: 27px;
+}

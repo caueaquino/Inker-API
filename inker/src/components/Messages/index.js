@@ -4,6 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import Badge from '@material-ui/core/Badge'
 import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 function getModalStyle() {
     const top = 50;
@@ -20,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     paper: {
         position: 'absolute',
         width: 400,
+        height: '100vh',
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
         padding: theme.spacing(4),
@@ -55,7 +57,28 @@ export default function Messages() {
                 onClose={handleClose}
             >
                 <div style={modalStyle} className={classes.paper}>
-                    fazer modal mensagem
+                    <header id="header-not">
+                        <h1>Mensagens</h1>
+
+                        <IconButton
+                            onClick={handleClose}
+                            edge="start"
+                            className={classes.menuButton}
+                            color="inherit"
+                            aria-label="Open drawer"
+                        >
+                            <CancelIcon style={{ height: '50px', width: '50px' }} color="secondary"></CancelIcon>
+                        </IconButton>
+                    </header>
+
+                    <section id="body-not">
+                        <h2>Nenhuma Mensagem Encontrada!</h2>
+                    </section>
+                    
+                    <footer id="foot-not">
+                        <span id="span-footer">Copyright - Inker © 2019</span>
+                        <div id="div-footer"></div>
+                    </footer>
                 </div>
             </Modal>
         </div>

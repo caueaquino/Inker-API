@@ -1,0 +1,36 @@
+#body-post {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border-bottom: 2px solid rgb(228, 228, 228);
+    height: 480px;
+    flex-direction: column;
+}
+
+#body-post button {
+    transition: all 0.2s;
+    padding: 20px;
+    border: none;
+    font-size: 12pt;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 76, 1);
+    color: white;
+}
+
+#body-post button:hover {   
+    transform: scale(1.05);
+}
+
+#icons-post {
+    transition: all 0.2s;
+}
+
+#icons-post:hover {
+    color: rgb(170, 0, 170);
+    transform: scale(1.2);
+}
+
+#abc-uhul {
+    display: flex;
+}
