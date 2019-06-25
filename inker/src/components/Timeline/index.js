@@ -19,12 +19,27 @@ export default class Timeline extends Component {
         var teste = window.location.pathname
         var teste2 = teste.split('timeline-')
         teste2 = teste2[1]
-        if(teste2 == undefined){
-            this.setState({feed: "Principal"})
+        if(teste2 === "software"){
+            this.setState({feed: "Software"})
             
         }
+        else if(teste2 === "analise"){
+            this.setState({feed: "Análise"})
+        }
+        else if(teste2 === "eletrica"){
+            this.setState({feed: "Elétrica"})
+        }
+        else if(teste2 === "mecanica"){
+            this.setState({feed: "Mecânica"})
+        }
+        else if(teste2 === "automacao"){
+            this.setState({feed: "Automação"})
+        }
+        else if(teste2 === "matematica"){
+            this.setState({feed: "Matemática"})
+        }
         else{
-            this.setState({feed: teste2})
+            this.setState({feed: "Principal"})
         }
     }
     render() {
