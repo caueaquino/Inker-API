@@ -31,6 +31,21 @@
 #edit-fot{
     display: flex;
     flex-direction: row;
-    width: 60%;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content: center;
+}
+
+#bt-confirm-edit, #bt-cancel-edit{
+    transition: all 0.2s;
+    height: 55px;
+}
+
+#bt-confirm-edit:hover, #bt-cancel-edit:hover{
+    transform: scale(1.1);
+}
+
+#bt-cancel-edit:hover{
+    border-radius: 40px;
+    text-decoration: underline;
+    background-color: rgba(240, 248, 255, 0);
 }

@@ -10,6 +10,16 @@ import { Fab } from '@material-ui/core';
 
 
 export default class index extends Component {
+    state = {
+        email: "",
+        senha: ""
+    }
+
+    changeHandler = e => {
+
+        this.setState({[e.target.name]: e.target.value});
+    }
+
     render() {
         return (
             <section id="login-container">

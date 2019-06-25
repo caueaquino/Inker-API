@@ -122,7 +122,7 @@ export default class EditPerfil extends Component {
                                 <Button
                                     variant="extended"
                                     size="medium"
-                                    id="bt-cancel"
+                                    id="bt-cancel-edit"
                                 >
                                     Cancelar
                                 </Button>
@@ -132,7 +132,7 @@ export default class EditPerfil extends Component {
                                 variant="extended"
                                 size="large"
                                 style={{ marginLeft: 10 }}
-                                id="bt-confirm"
+                                id="bt-confirm-edit"
                             >
                                 Confirmar
                             </Fab>

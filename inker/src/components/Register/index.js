@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
 import { Fab, TextField, Button } from '@material-ui/core';
@@ -33,131 +33,149 @@ const studyAreas = [
     }
 ];
 
-const RegisterModal = () => {
-    return (
-        <>
-            <div
-                id="register-modal"
-            >
-                <header id="header-register">
+class RegisterModal extends Component {
+    state = {
+        email: "",
+        password: "",
+        course: "",
+        name: "",
+        lastName: "",
+        avatar: "",
+        age: "",
+        cell: ""
+    }
 
-                    <h1>
-                        Cadastro
-                        </h1>
+    changeHandler = e => {
 
-                </header>
+        this.setState({[e.target.name]: e.target.value});
+    }
+    
+    render(){
+        return (
+            <>
+                <div
+                    id="register-modal"
+                >
+                    <header id="header-register">
 
-                <section id="section-register">
+                        <h1>
+                            Cadastro
+                            </h1>
 
-                    <TextField
-                        required
-                        id="email-input"
-                        label="E-mail"
-                        style={{ marginTop: 40 }}
-                        margin="normal"
-                        fullWidth
-                    />
+                    </header>
 
-                    <TextField
-                        required
-                        id="password-input"
-                        label="Senha"
-                        style={{marginTop: 30}}
-                        type="password"
-                        autoComplete="current-password"
-                        margin="normal"
-                        fullWidth
-                    />
+                    <section id="section-register">
 
-                    <TextField
-                        id="standard-select-currency-native"
-                        select
-                        styles={{ marginTop: 30 }}
-                        label="Curso"
-                        SelectProps={{
-                            native: true,
-                        }}
-                        margin="normal"
-                    >
-                        {studyAreas.map(option => (
-                            <option key={option.value} value={option.value}>
-                                {option.label}
-                            </option>
-                        ))}
-                    </TextField>
+                        <TextField
+                            required
+                            id="email-input"
+                            label="E-mail"
+                            style={{ marginTop: 40 }}
+                            margin="normal"
+                            fullWidth
+                        />
 
-                    <TextField
-                        required
-                        id="name-input"
-                        label="Nome"
-                        style={{ marginTop: 30 }}
-                        margin="normal"
-                        fullWidth
-                    />
+                        <TextField
+                            required
+                            id="password-input"
+                            label="Senha"
+                            style={{marginTop: 30}}
+                            type="password"
+                            autoComplete="current-password"
+                            margin="normal"
+                            fullWidth
+                        />
 
-                    <TextField
-                        id="lastname-input"
-                        label="Sobrenome"
-                        style={{ marginTop: 30 }}
-                        margin="normal"
-                        fullWidth
-                    />
-
-                    <TextField
-                        id="avatar-input"
-                        label="URL Avatar"
-                        style={{ marginTop: 30 }}
-                        margin="normal"
-                        fullWidth
-                    />
-
-                    <TextField
-                        id="age-input"
-                        label="Idade"
-                        style={{ marginTop: 30 }}
-                        margin="normal"
-                        type="number"
-                        fullWidth
-                    />
-
-                    <TextField
-                        id="email-input"
-                        label="Telefone"
-                        style={{ marginTop: 30 }}
-                        margin="normal"
-                        type="phone"
-                        fullWidth
-                    />
-                </section>
-
-                <footer id="footer-register">
-                    <Link 
-                        to="/home/login"
-                        style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-                    >
-                        <Button
-                            variant="extended"
-                            size="medium"
-                            id="bt-cancel"
+                        <TextField
+                            id="standard-select-currency-native"
+                            select
+                            styles={{ marginTop: 30 }}
+                            label="Curso"
+                            SelectProps={{
+                                native: true,
+                            }}
+                            margin="normal"
                         >
-                            Cancelar
-                        </Button>
-                    </Link>
+                            {studyAreas.map(option => (
+                                <option key={option.value} value={option.value}>
+                                    {option.label}
+                                </option>
+                            ))}
+                        </TextField>
 
-                    <Fab
-                        variant="extended"
-                        size="large"
-                        style={{ marginLeft: 10 }}
-                        id="bt-confirm"
-                    >
-                        Confirmar
-                    </Fab>
+                        <TextField
+                            required
+                            id="name-input"
+                            label="Nome"
+                            style={{ marginTop: 30 }}
+                            margin="normal"
+                            fullWidth
+                        />
 
-                </footer>
+                        <TextField
+                            id="lastname-input"
+                            label="Sobrenome"
+                            style={{ marginTop: 30 }}
+                            margin="normal"
+                            fullWidth
+                        />
 
-            </div>
-        </>
-    );
+                        <TextField
+                            id="avatar-input"
+                            label="URL Avatar"
+                            style={{ marginTop: 30 }}
+                            margin="normal"
+                            fullWidth
+                        />
+
+                        <TextField
+                            id="age-input"
+                            label="Idade"
+                            style={{ marginTop: 30 }}
+                            margin="normal"
+                            type="number"
+                            fullWidth
+                        />
+
+                        <TextField
+                            id="email-input"
+                            label="Telefone"
+                            style={{ marginTop: 30 }}
+                            margin="normal"
+                            type="phone"
+                            fullWidth
+                        />
+                    </section>
+
+                    <footer id="footer-register">
+                        <Link 
+                            to="/home/login"
+                            style={{textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+                        >
+                            <Button
+                                variant="extended"
+                                size="medium"
+                                id="bt-cancel"
+                            >
+                                Cancelar
+                            </Button>
+                        </Link>
+
+                        <Fab
+                            variant="extended"
+                            size="large"
+                            style={{ marginLeft: 10 }}
+                            id="bt-confirm"
+                        >
+                            Confirmar
+                        </Fab>
+
+                    </footer>
+
+                </div>
+            </>
+        );
+    }
 }
 
 export default RegisterModal;

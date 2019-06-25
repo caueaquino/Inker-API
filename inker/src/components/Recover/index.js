@@ -12,7 +12,7 @@ export default class Recover extends Component {
 
     changeHandler = e =>{
         this.setState({email: e.taget.value});
-        console.log(this.state.email)
+        
     }
 
     render(){
@@ -31,7 +31,7 @@ export default class Recover extends Component {
                     <TextField
                         required
                         id="email-input"
-                        onChange={this.changeHandler}
+                        //onChange={this.changeHandler}
                         label="E-mail"
                         style={{marginTop: 40}}
                         margin="normal"
@@ -51,16 +51,16 @@ export default class Recover extends Component {
                                 Cancelar
                             </Button>
                         </Link>
-
-                        <Fab
-                            variant="extended"
-                            size="large"
-                            style={{ marginLeft: 10 }}
-                            id="bt-confirm-recover"
-                            value="send"
-                        >
-                            Confirmar
-                        </Fab>
+                        <a href="mailto:?subject=Assunto do email&amp;body=Olá,%0D%0A%0D%0A[corpo do email]%0D%0A%0D%0AAtenciosamente,%0D%0A[nome do usuário]" style={{textDecoration: 'none'}}>
+                            <Fab
+                                variant="extended"
+                                size="large"
+                                style={{ marginLeft: 10 }}
+                                id="bt-confirm-recover"
+                            >
+                                Confirmar
+                            </Fab>
+                        </a>
                     </footer>
                 </form>
             </section>
