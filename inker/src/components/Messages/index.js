@@ -5,6 +5,7 @@ import Badge from '@material-ui/core/Badge'
 import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
 import CancelIcon from '@material-ui/icons/Cancel';
+import MenuItem from '@material-ui/core/MenuItem';
 
 function getModalStyle() {
     const top = 50;
@@ -45,11 +46,13 @@ export default function Messages() {
 
     return (
         <div>
-            <IconButton color="inherit" onClick={handleOpen}>
-              <Badge badgeContent={0} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+            <MenuItem>
+                <IconButton color="inherit" onClick={handleOpen}>
+                <Badge badgeContent={0} color="secondary">
+                    <MailIcon />
+                </Badge>
+                </IconButton>
+            </MenuItem>
             <Modal
                 aria-labelledby="simple-modal-title"
                 aria-describedby="simple-modal-description"

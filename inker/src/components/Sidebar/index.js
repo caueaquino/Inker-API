@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme => ({
         boxShadow: theme.shadows[5],
         padding: theme.spacing(4),
         outline: 'none',
+        // eslint-disable-next-line no-dupe-keys
         padding: 0,
     },
     root: {

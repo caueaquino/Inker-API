@@ -29,6 +29,7 @@ const useStyles = makeStyles(theme => ({
         boxShadow: theme.shadows[5],
         padding: theme.spacing(4),
         outline: 'none',
+        // eslint-disable-next-line no-dupe-keys
         padding: 0,
     },
 }));
@@ -95,11 +96,6 @@ export default function CreatePost() {
                             Confirmar
                         </button>
                     </section>
-
-                    <footer id="foot-not">
-                        <span id="span-footer">Copyright - Inker © 2019</span>
-                        <div id="div-footer"></div>
-                    </footer>
                 </div>
             </Modal>
         </div>

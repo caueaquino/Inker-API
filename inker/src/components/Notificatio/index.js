@@ -5,8 +5,8 @@ import Badge from '@material-ui/core/Badge'
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import IconButton from '@material-ui/core/IconButton';
 import CancelIcon from '@material-ui/icons/Cancel';
+import MenuItem from '@material-ui/core/MenuItem';
 
-import MainFooter from '../MainFooter';
 
 import './styles.css'
 
@@ -49,11 +49,14 @@ export default function Notifications() {
 
     return (
         <div>
-            <IconButton color="inherit" onClick={handleOpen}>
-                <Badge badgeContent={0} color="secondary">
-                    <NotificationsIcon />
-                </Badge>
-            </IconButton>
+            <MenuItem>    
+                <IconButton color="inherit" onClick={handleOpen}>
+                    <Badge badgeContent={0} color="secondary">
+                        <NotificationsIcon />
+                    </Badge>
+                </IconButton>
+            </MenuItem>
+            
             <Modal
                 aria-labelledby="simple-modal-title"
                 aria-describedby="simple-modal-description"

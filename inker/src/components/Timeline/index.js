@@ -12,7 +12,8 @@ import MainFooter from '../MainFooter';
 export default class Timeline extends Component {
 
     state = {
-        feed: ""
+        feed: "",
+        posts: []
     }
 
     componentDidMount(){
