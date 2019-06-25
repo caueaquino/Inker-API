@@ -10,12 +10,28 @@ import CreatePost from '../CreatePost';
 import MainFooter from '../MainFooter';
 
 export default class Timeline extends Component {
-    
+
+    state = {
+        feed: ""
+    }
+
+    componentDidMount(){
+        var teste = window.location.pathname
+        var teste2 = teste.split('timeline-')
+        teste2 = teste2[1]
+        if(teste2 == undefined){
+            this.setState({feed: "Principal"})
+            
+        }
+        else{
+            this.setState({feed: teste2})
+        }
+    }
     render() {
         return (
             <section id="timeline">
                 <Card className="card-top">
-                    <h1>Feed Principal</h1>
+                    <h1>Feed {this.state.feed}</h1>
                     
                     <CreatePost></CreatePost>
                 </Card>
