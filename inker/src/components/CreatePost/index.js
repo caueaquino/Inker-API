@@ -8,6 +8,8 @@ import DuoIcon from '@material-ui/icons/Duo'
 import CancelIcon from '@material-ui/icons/Cancel';
 import InsertPhotoIcon from '@material-ui/icons/InsertPhoto'
 
+import {CreatePost} from '../Timeline'
+
 import './styles.css'
 
 function getModalStyle() {
@@ -92,7 +94,7 @@ export default function CreatePost() {
                             variant="outlined"
                         />
 
-                        <button>
+                        <button onClick={CreatePost()}>
                             Confirmar
                         </button>
                     </section>

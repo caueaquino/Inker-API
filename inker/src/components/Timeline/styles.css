@@ -33,9 +33,10 @@ h1{
 
 .card-post {
     width: 80%; 
-    height: calc(75vh - 194px);
+    min-height: calc(75vh - 194px);
     margin-top: 5px;
     min-height: 100px;
+    background-color: rgb(231, 205, 255);
 }
 
 .card-post section {
@@ -55,3 +56,57 @@ h1{
     transform: scale(1.1);
 }
 
+#sec-post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#posts-card {
+    margin:30px;
+    padding: 30px;
+    width: 60%;
+}
+
+#posts-card header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 10px 40px;
+}
+
+#posts-card h2 {
+    margin: 15px 80px;
+    font-size: 30px;
+}
+
+#posts-card footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#posts-card footer button {
+    padding: 7px 90px;
+    border: none;
+    color: aliceblue;
+    font-size: 16px;
+    background-color: rgba(255, 28, 96, 0.2);
+    border: 1px solid rgb(204, 204, 204);
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.19); */
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.2s
+}
+
+#posts-card footer button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 28, 96, 0.8);
+}

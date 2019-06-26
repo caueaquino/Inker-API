@@ -6,6 +6,9 @@ import Card from '@material-ui/core/Card';
 import Fab from '@material-ui/core/Fab';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
+import FavoriteIcon from '@material-ui/icons/Favorite'
+
+import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes'
 import CreatePost from '../CreatePost';
 import MainFooter from '../MainFooter';
 
@@ -13,7 +16,11 @@ export default class Timeline extends Component {
 
     state = {
         feed: "",
-        posts: []
+        posts: ['teste 1','teste 2']
+    }
+
+    createPost(text){
+        this.state.posts.push(text);
     }
 
     componentDidMount(){
@@ -54,11 +61,26 @@ export default class Timeline extends Component {
 
                 <Card className="card-post">
                     <header>
-
+                        
                     </header>
 
-                    <section>
-                        <h2>Nenhum post foi encontrado!</h2>
+                    <section id="sec-post">
+                        {this.state.posts.map(post => {
+                            return <Card id="posts-card" style={{backgroundColor: 'rgb(204, 204, 204)', padding: 0}}>
+                                        <header>
+                                            Leonardo Norio
+                                        </header>
+
+                                        <h2>
+                                            {post}
+                                        </h2>
+
+                                        <footer>
+                                            <button><FavoriteIcon style={{marginRight: '20px'}}></FavoriteIcon>CURTIR</button>
+                                            <button><SpeakerNotesIcon style={{marginRight: '20px'}}></SpeakerNotesIcon>COMENTAR</button>
+                                        </footer>
+                                    </Card>
+                        })}
                     </section>
 
                     <footer></footer>
